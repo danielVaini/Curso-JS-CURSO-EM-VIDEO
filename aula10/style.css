@@ -1,0 +1,15 @@
+div#meio{
+    width: 500px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 10px;
+}
+
+body{
+    background-color: aqua;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    
+}

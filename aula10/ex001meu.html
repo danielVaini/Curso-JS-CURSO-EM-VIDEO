@@ -4,25 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Minha calculadora</title>
-        <style>
-            input{
-                border-radius: 5px;
-                width: 130px; 
-            }
-
-        
-            
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Formula de Bhaskara</h1>
-        <input type="number" placeholder="Digite o valor de A" name="vA" id="A"></br>
-        <input type="number" placeholder="Digite o valor de B" id="B"></br>
-        <input type="number" placeholder="Digite o valor de C" id="C"></br>
-        <input type="button" value="Calcular" onclick="calcu()">
-        
-        <div id="delta">Resultado Delta</div>
-        <div id="bhas">Resultado Bhaskara</div>
+       <div id="meio">
+            <h1>Formula de Bhaskara</h1>
+            <input type="number" placeholder="Digite o valor de A" name="vA" id="A"></br>
+            <input type="number" placeholder="Digite o valor de B" id="B"></br>
+            <input type="number" placeholder="Digite o valor de C" id="C"></br>
+            <input type="button" value="Calcular" onclick="calcu()">
+            
+            <div id="delta">Resultado Delta</div>
+            <div id="bhas">Resultado Bhaskara</div>
+        </div>
         <script>
             function calcu(){
                 var n1 = window.document.getElementById(`A`)
@@ -36,11 +30,16 @@
 
                 var delta = (b**2) - (4*a*c)
                 del.innerText = `O delta com A = ${a} B = ${b} C = ${c} vale ${delta}`
-                
-                var x1 = (-b + (delta)**0.5) / 2*a
-                var x2 = (-b - (delta)**0.5) / 2*a
-
-                bhas.innerText = `A raiz X1 = ${x2} e X2 = ${x2}`
+                if (del < 0){
+                    bhas.innerText = 'Não se pode tirar raiz de numero negativo'
+                    del.innerText = `Delta = ${delta}`
+                }else{
+                    
+                    var x1 = (-b + (delta)**0.5) / 2*a
+                    var x2 = (-b - (delta)**0.5) / 2*a
+                    
+                    bhas.innerText = `A raiz X1 = ${x2} e X2 = ${x2}`
+                }
 
             }
         </script>
