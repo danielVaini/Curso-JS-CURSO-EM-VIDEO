@@ -1,2 +1,4 @@
-# Curso JS CURSO EM VIDEO
- Curso de JS do curso em video
+# Curso JS - CURSO EM VIDEO
+
+
+Repositório das minhas aulas com Gustavo Guanabara pelo **Curso em Video**
