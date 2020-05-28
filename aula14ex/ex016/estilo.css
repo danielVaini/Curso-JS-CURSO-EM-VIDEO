@@ -21,3 +21,25 @@ footer{
     text-align: center;
     font-style: italic;
 }
+
+input{
+    border-radius: 5px;
+    width: 300px;
+}
+
+#n1{
+    margin-left: 9px;
+}
+
+#n2{
+    margin-left: 10px;
+}
+
+button{
+    border-radius: 5px;
+    margin: auto;
+}
+
+#dados{
+    text-align: center;
+}
