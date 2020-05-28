@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio 11</title>
+    </head>
+    <body>
+        <h1>Exercicio 11 </h1>
+        <label>Qual o pais onde nasceu?</label>
+        <input type="text" placeholder="Pais" name="btnText" id="btnT">
+        <input type="button" value="Verificar" onclick="verifica()" id="btnV">
+        <div id="res"></div>
+
+        <script>
+            function verifica(){
+                var text = window.document.querySelector('input#btnT')
+                var res = window.document.querySelector('div#res')
+                var tex = (text.value)
+                if(tex=='Brasil' || tex=='brasil'){
+                    res.innerHTML = `Nasceu no ${tex}, então você é Brasileiro !`
+                }else{
+                    res.innerHTML = `Nasceu em ${tex} então você é estrangeiro !`
+                }
+            }
+
+        </script>
+    </body>
+</html>
