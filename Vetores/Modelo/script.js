@@ -10,19 +10,22 @@ function registrar(){
 
 function pegar(){
     var buttonElement = document.querySelector('input#pos')
-    var pos = buttonElement.value;
+    var posi = buttonElement.value;
     var res = document.querySelector('div#res');
-    if(nomes[pos] == undefined){
+    if(nomes[posi] == undefined){
         alert('Vetor vazio')
     }
-    else if (pos < 0){
+    else if (posi < 0){
         alert('Digite um nummero > 0')
     }else{
-        res.innerHTML = `${nomes[pos]}`
+        res.innerHTML = `Vetor de posição ${posi} tem o elemento : ${nomes[posi]}`
     }
 }
 
 function apagar(){
-    nomes = [];
+    var pos = document.querySelector('input#pos').value
+    nomes[pos] = [];
     console.log(nomes)
+    res.innerHTML = ''
+    console.log(pos)
 }
