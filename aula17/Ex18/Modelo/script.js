@@ -1,20 +1,19 @@
 var array = [];
 var sel = document.querySelector('select.sec');
-var inpElement = document.querySelector('input.inpNum');
-var inpValue = Number(inpElement.value);
+
 var res = document.querySelector('div.res');
 
 
-var IsNumber = (n) => {
-    if(Number(n) >= 0 && Number(n) <= 100){
-        return true
+ var IsNumber = (n) => {
+     if(n >= 0 && n <= 100){
+         return true
     }else{
-        return false
+         return false
     }
-}
+ }
 
 var inList = (n, l) => {
-    if(l.indexOf(Number(n)) != -1){
+    if(l.indexOf(n) != -1){
         return true
     }else{
         return false
@@ -22,20 +21,33 @@ var inList = (n, l) => {
 }
 
 var addArray = () => {
+    var inpElement = document.querySelector('input.inpNum');
+    var inpValue = Number(inpElement.value);
     res.innerHTML = '';
+    
     if(IsNumber(inpValue) && !inList(inpValue, array)){
-    }else {
+        console.log(inpValue)
+        
+        
+       
         array.push(inpValue);
         console.log(array)
-        
-        
+            
+            
         var opt = document.createElement('option');
         opt.text = `Valor ${inpValue} adicionado`
-        
+            
         sel.appendChild(opt)
-        window.alert("Numero invalido")
-        
+        console.log('Dan')
+        inpElement.value = '';
+        inpElement.focus()
+    }else{
+        window.alert("Numero invalido ou Já cadastrado")
+
     }
+    
+    
+    
 }
     
 
