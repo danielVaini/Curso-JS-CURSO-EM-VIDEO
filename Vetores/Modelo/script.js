@@ -16,7 +16,7 @@ function pegar(){
         alert('Vetor vazio')
     }
     else if (posi < 0){
-        alert('Digite um nummero > 0')
+        alert('Digite um numero > 0')
     }else{
         res.innerHTML = `Vetor de posição ${posi} tem o elemento : ${nomes[posi]}`
     }
